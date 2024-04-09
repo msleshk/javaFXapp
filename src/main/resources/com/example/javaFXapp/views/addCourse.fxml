@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="489.0" prefWidth="750.0" style="-fx-background-color: #B0C4DE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaFXapp.controllers.AddCourseController">
+   <children>
+      <TableView fx:id="courseTable" layoutX="278.0" layoutY="20.0" prefHeight="450.0" prefWidth="454.0" style="-fx-background-color: #778899;">
+        <columns>
+          <TableColumn fx:id="availableCourses" minWidth="151.99993896484375" prefWidth="151.99993896484375" text="Available courses" />
+            <TableColumn fx:id="availableSubjects" minWidth="151.99993896484375" prefWidth="300.0" text="Subjects">
+               <columns>
+                  <TableColumn fx:id="firstSubject" minWidth="75.99996948242188" prefWidth="100.0" text="Fisrt" />
+                  <TableColumn fx:id="secondSubject" minWidth="70.666748046875" prefWidth="100.0" text="Second" />
+                  <TableColumn fx:id="thirdSubject" minWidth="70.666748046875" prefWidth="100.0" text="Third" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="addCourse" layoutX="76.0" layoutY="245.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 10; -fx-background-color: #708090;" text="Add course" textFill="#c9bdbd">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateCourse" layoutX="76.0" layoutY="297.0" mnemonicParsing="false" onAction="#updateCourse" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 10; -fx-background-color: #708090;" text="Update course" textFill="#c9bdbd">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="firstSubjectInput" layoutX="26.0" layoutY="80.0" prefHeight="40.0" prefWidth="150.0" promptText="First subject" style="-fx-background-radius: 10; -fx-background-color: #FFFAFA;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="thirdSubjectInput" layoutX="26.0" layoutY="181.0" prefHeight="40.0" prefWidth="150.0" promptText="Third subject" style="-fx-background-radius: 10; -fx-background-color: #FFFAFA;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="secondSubjectInput" layoutX="26.0" layoutY="130.0" prefHeight="40.0" prefWidth="150.0" promptText="Second subject" style="-fx-background-radius: 10; -fx-background-color: #FFFAFA;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ChoiceBox fx:id="courseInput" layoutX="26.0" layoutY="20.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FFFAFA; -fx-background-radius: 10;" />
+   </children>
+</AnchorPane>
